@@ -1,13 +1,13 @@
-var sliderElement = document.querySelector("#slider");
-var buttonElement = document.querySelector("#button");
+let sliderElement = document.querySelector("#slider");
+let buttonElement = document.querySelector("#button");
 
-var sizePassword = document.querySelector("#valor");
-var password = document.querySelector("#password");
+let sizePassword = document.querySelector("#valor");
+let password = document.querySelector("#password");
 
-var containerPassword = document.querySelector("#container-password");
+let containerPassword = document.querySelector("#container-password");
 
-var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#&";
-var novaSenha = "";
+let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#&";
+let novaSenha = "";
 
 sizePassword.innerHTML = sliderElement.value;
 
@@ -16,9 +16,9 @@ slider.oninput = function() {
 }
 
 function generatePassword() {
-    var pass = "";
+    let pass = "";
 
-    for(var i = 0, n = charset.length; i < sliderElement.value; ++i) {
+    for(let i = 0, n = charset.length; i < sliderElement.value; ++i) {
         pass += charset.charAt(Math.floor(Math.random() * n));
     }
 
